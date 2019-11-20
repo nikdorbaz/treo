@@ -1,0 +1,130 @@
+/* cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/Roboto-Regular.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-display: swap;
+    src: url('../fonts/Roboto-Black.ttf') format('opentype');
+}
+
+.header-block{
+    background-image: url('../img/background.png');
+    height: 100vh;
+    background-size: cover;
+    color: #fff;
+}
+
+.header-block header{
+    padding: 45px 0;
+}
+
+.logo-box{
+    line-height: 50px;
+}
+
+.main-nav{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 35px;
+}
+
+.main-nav a{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    line-height: 50px;
+    color: #fff;
+}
+
+#nav-menu{
+    width: 22px;
+    height: 25px;
+    position: relative;
+    margin-left: 45px;
+    margin-top: 17px;  
+    cursor: pointer;
+}
+
+#nav-menu span{
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    opacity: 1;
+    left: 0;
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+#nav-menu span:nth-child(1) {
+    top: 0px;
+}
+  
+#nav-menu span:nth-child(2),#nav-menu span:nth-child(3) {
+    top: 7px;
+}
+  
+#nav-menu span:nth-child(4) {
+    top: 14px;
+}
+  
+#nav-menu.open span:nth-child(1) {
+    top: 7px;
+    width: 0%;
+    left: 50%;
+}
+  
+#nav-menu.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+  
+#nav-menu.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+  
+#nav-menu.open span:nth-child(4) {
+    top: 7px;
+    width: 0%;
+    left: 50%;
+}
+
+.header-block--desc{
+    text-align: center;
+    line-height: 24px;
+    padding: 0 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.header-block--desc h1{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 75px;
+    text-transform: uppercase;
+    margin-bottom: 0.325em;
+}
+
+.header-block--img{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
