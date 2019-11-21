@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="101" height="101" viewBox="0 0 101 101" fill="none">
+<path d="M52.0864 95.2902C21.9809 104.466 8.60065 80.9983 8.60065 56.2943C-13.1422 10.9903 15.2908 -15.3892 52.0864 11.5638C68.2542 24.7535 117.315 0.66786 95.5721 56.2943C97.8022 87.8351 87.2095 111.921 52.0864 95.2902Z" fill="#063271" fill-opacity="0.05"/>
+<rect x="24" y="12.4727" width="58" height="68" rx="5" fill="white" stroke="#1063AA" stroke-width="2"/>
+<path d="M24 17.4727C24 14.7112 26.2386 12.4727 29 12.4727H33V80.4727H29C26.2386 80.4727 24 78.2341 24 75.4727V17.4727Z" fill="white" stroke="#1063AA" stroke-width="2"/>
+<circle cx="57" cy="38.1641" r="3" stroke="#50A0FF" stroke-width="2"/>
+<path d="M64.9381 50.1641H49.0619C49.554 46.2178 52.9204 43.1641 57 43.1641C61.0796 43.1641 64.446 46.2178 64.9381 50.1641Z" stroke="#50A0FF" stroke-width="2"/>
+<circle cx="47" cy="38.1641" r="3" fill="white" stroke="#50A0FF" stroke-width="2"/>
+<path d="M54.9381 50.1641H39.0619C39.554 46.2178 42.9204 43.1641 47 43.1641C51.0796 43.1641 54.446 46.2178 54.9381 50.1641Z" fill="white" stroke="#50A0FF" stroke-width="2"/>
+<rect x="20" y="17.4727" width="8" height="4" rx="2" fill="white" stroke="#1063AA" stroke-width="2"/>
+<rect x="20" y="26.4727" width="8" height="4" rx="2" fill="white" stroke="#1063AA" stroke-width="2"/>
+<rect x="20" y="35.4727" width="8" height="4" rx="2" fill="white" stroke="#1063AA" stroke-width="2"/>
+<rect x="20" y="44.4727" width="8" height="4" rx="2" fill="white" stroke="#1063AA" stroke-width="2"/>
+<rect x="20" y="53.4727" width="8" height="4" rx="2" fill="white" stroke="#1063AA" stroke-width="2"/>
+<rect x="20" y="62.4727" width="8" height="4" rx="2" fill="white" stroke="#1063AA" stroke-width="2"/>
+<rect x="20" y="71.4727" width="8" height="4" rx="2" fill="white" stroke="#1063AA" stroke-width="2"/>
+<rect x="68" y="53.4727" width="30" height="30" rx="4" fill="#50A0FF"/>
+<path d="M83.8516 67.3203H88.6094V69.3711H83.8516V74.7617H81.6719V69.3711H76.9141V67.3203H81.6719V62.3398H83.8516V67.3203Z" fill="white"/>
+</svg>
