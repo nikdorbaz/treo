@@ -108,6 +108,7 @@ section:nth-of-type(2n+1) {
     border-color: #063271;
     border: 2px solid;
     font-size: 15px;
+    max-width: 100%;
 }
 
 .btn-green {
@@ -674,23 +675,130 @@ section.header-block {
     h2 {
         font-size: 30px;
     }
+    .header-block .logo-box {
+        text-align: center;
+    }
+    .header-block header {
+        padding: 25px 0;
+    }
+    .header-block .main-nav {
+        padding-left: 0;
+    }
+    .header-block--desc {
+        max-width: 500px;
+        margin: auto;
+    }
+    .features-item {
+        margin-bottom: 30px;
+    }
+    section h2 {
+        padding: 50px 0 30px;
+    }
+    .softwares-block .softwares-block--desc {
+        padding-top: 0;
+        max-width: 100%;
+    }
     .softwares-block {
         overflow: hidden;
     }
     .softwares-block img {
         max-width: 100%;
         margin: 0;
-        width: 75%;
     }
     .softwares-block .left-image:before,
     .softwares-block .right-image:before {
-        right: -50px;
+        right: -230px;
         bottom: -100px;
+    }
+    .softwares-block .left-image:before {
+        left: -230px;
+    }
+    .services-block .services-item {
+        margin-bottom: 25px;
+    }
+    .advantages-block .advantages-image {
+        display: none;
+    }
+    .prices-block .row {
+        margin: 0;
+    }
+    .prices-block .price-item {
+        margin-left: 0;
+    }
+    footer .logo-box {
+        text-align: center;
+    }
+    .footer-block .footer-links {
+        line-height: 60px;
+    }
+    .footer-block ul {
+        text-align: center;
+    }
+    .footer-block ul.social-links {
+        margin-bottom: 10px;
+    }
+    .footer-block .legal {
+        text-align: center;
+    }
+    .footer-block .footer-nav {
+        font: none;
+    }
+    .softwares-block .softwares-block--desc.right-part {
+        padding-left: 0;
     }
 }
 
 @media only screen and ( max-width: 480px) {
     .header-block--desc h1 {
         font-size: 38px;
+    }
+    .header-block .main-nav {
+        display: inline-block;
+    }
+    .header-block .main-nav a {
+        line-height: 24px;
+        display: block;
+    }
+    .header-block #nav-menu {
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: -10px;
+    }
+    .header-block header {
+        padding: 0;
+    }
+    .modal {
+        padding: 20px;
+        max-width: 90%;
+    }
+    .modal-header {
+        margin: 10px 0 30px;
+    }
+    .header-block--desc {
+        padding: 0;
+    }
+    .header-block--img {
+        opacity: 0.4;
+    }
+    .features-item {
+        text-align: center;
+    }
+    section,
+    .features-block h2 {
+        padding-bottom: 40px;
+    }
+    .prices-block .price-item {
+        margin-bottom: 15px;
+    }
+    .contact-form .btn-green {
+        margin-right: 0;
+    }
+    .footer-block .footer-links {
+        line-height: 50px;
+    }
+    .footer-block .legal {
+        line-height: 30px;
+        padding: 10px 0;
     }
 }
