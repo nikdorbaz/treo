@@ -452,7 +452,9 @@ section.header-block {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 55%;
+    max-height: 90%;
+    width: auto;
+    max-width: 55%;
 }
 
 
