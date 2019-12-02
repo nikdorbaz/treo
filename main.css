@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
@@ -113,6 +115,7 @@ section:nth-of-type(2n+1) {
 
 .btn-green {
     color: #fff;
+    background: -o-linear-gradient(1.54deg, #3ADABA -1.37%, #43EAC8 103.67%);
     background: linear-gradient(88.46deg, #3ADABA -1.37%, #43EAC8 103.67%);
     border-color: transparent;
 }
@@ -135,7 +138,8 @@ section:nth-of-type(2n+1) {
     width: 6px;
     height: 6px;
     pointer-events: none;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 select {
@@ -160,7 +164,9 @@ select {
 .modal-active .modal {
     display: block;
     opacity: 1;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .modal {
@@ -168,7 +174,9 @@ select {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -100%);
+    -webkit-transform: translate(-50%, -100%);
+        -ms-transform: translate(-50%, -100%);
+            transform: translate(-50%, -100%);
     background: #fff;
     width: 455px;
     max-width: 100%;
@@ -176,6 +184,8 @@ select {
     border-radius: 4px;
     z-index: 3;
     opacity: 0;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -208,8 +218,14 @@ section.header-block {
 }
 
 .header-block .main-nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-left: 35px;
 }
 
@@ -239,7 +255,6 @@ section.header-block {
     opacity: 1;
     left: 0;
     -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
 }
@@ -265,16 +280,14 @@ section.header-block {
 
 .header-block #nav-menu.open span:nth-child(2) {
     -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
 }
 
 .header-block #nav-menu.open span:nth-child(3) {
     -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
 }
 
 .header-block #nav-menu.open span:nth-child(4) {
@@ -294,6 +307,8 @@ section.header-block {
 .header-block--desc .arrow-down {
     display: block;
     margin-top: 60px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -315,12 +330,16 @@ section.header-block {
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     max-width: 100%;
 }
 
 .header-block .main-nav .sub-menu {
     background: #fff;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
     display: none;
     position: absolute;
@@ -494,6 +513,8 @@ section.header-block {
 }
 
 .prices-block .price-item--btn {
+    background: -webkit-gradient(linear, left top, right top, color-stop(1.32%, #00B5D4), color-stop(100.38%, #1063AA));
+    background: -o-linear-gradient(left, #00B5D4 1.32%, #1063AA 100.38%);
     background: linear-gradient(90deg, #00B5D4 1.32%, #1063AA 100.38%);
     border-radius: 4px;
     width: 100%;
@@ -512,6 +533,7 @@ section.header-block {
 }
 
 .prices-block .price-item--btn.btn-green {
+    background: -o-linear-gradient(1.54deg, #3ADABA -1.37%, #43EAC8 103.67%);
     background: linear-gradient(88.46deg, #3ADABA -1.37%, #43EAC8 103.67%);
     border-radius: 4px;
     font-size: 16px;
@@ -656,6 +678,8 @@ section.header-block {
 }
 
 .footer-block .legal {
+    background: -webkit-gradient(linear, left top, right top, color-stop(2.5%, #063271), to(#00B5D5));
+    background: -o-linear-gradient(left, #063271 2.5%, #00B5D5 100%);
     background: linear-gradient(90deg, #063271 2.5%, #00B5D5 100%);
     line-height: 40px;
     color: #fff;
