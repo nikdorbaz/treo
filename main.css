@@ -396,6 +396,10 @@ section.header-block {
 
 /* Softwares block */
 
+.softwares-block{   
+    overflow: hidden;
+}
+
 .softwares-block img {
     width: calc(100% + 100px);
     margin-left: -50px;
