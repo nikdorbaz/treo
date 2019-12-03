@@ -121,6 +121,10 @@ section:nth-of-type(2n+1) {
     position: relative;
 }
 
+select::-ms-expand {
+    display: none;
+}
+
 .select:after {
     content: "";
     background-image: url('../img/select_arrow.svg');
@@ -188,6 +192,29 @@ select {
     text-align: center;
 }
 
+#arrow-top{
+    background-image: url(../img/arrow_down.svg);
+    background-position: center 15px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-color: #01afd0;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 15px;
+    bottom: 45px;
+    border: 1px solid #01afd0;
+    border-radius: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+#arrow-top.show{
+    transform: rotate(180deg);
+    opacity: 0.4;
+}
+
 
 /* Start block */
 
@@ -201,6 +228,25 @@ section.header-block {
 
 .header-block header {
     padding: 45px 0;
+}
+
+.header-block header.fixed{
+    position: fixed;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    background: #fff;
+    z-index: 9;
+    padding: 5px 0;
+    border-bottom: 1px solid #028ab4;
+}
+
+.header-block header.fixed .main-nav a{
+    color: #333;
+}
+
+.header-block header.fixed #nav-menu span{
+    background: #333;
 }
 
 .header-block .logo-box {
@@ -257,27 +303,27 @@ section.header-block {
     top: 14px;
 }
 
-.header-block #nav-menu.open span:nth-child(1) {
+.header-block .open #nav-menu span:nth-child(1) {
     top: 7px;
     width: 0%;
     left: 50%;
 }
 
-.header-block #nav-menu.open span:nth-child(2) {
+.header-block .open #nav-menu span:nth-child(2) {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
-.header-block #nav-menu.open span:nth-child(3) {
+.header-block .open #nav-menu span:nth-child(3) {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
 
-.header-block #nav-menu.open span:nth-child(4) {
+.header-block .open #nav-menu span:nth-child(4) {
     top: 7px;
     width: 0%;
     left: 50%;
@@ -333,7 +379,7 @@ section.header-block {
     opacity: 0;
 }
 
-.header-block #nav-menu.open .sub-menu {
+.header-block .open #nav-menu .sub-menu {
     display: block;
     opacity: 1;
 }
@@ -395,6 +441,10 @@ section.header-block {
 
 
 /* Softwares block */
+
+.softwares-block{
+    overflow: hidden;
+}
 
 .softwares-block img {
     width: calc(100% + 100px);
@@ -502,6 +552,7 @@ section.header-block {
     color: #fff;
     font-weight: 600;
     margin-top: 20px;
+    white-space: nowrap;
 }
 
 .prices-block .price-item--btn span {
@@ -670,7 +721,43 @@ section.header-block {
     margin-right: 5px;
 }
 
-@media only screen and ( max-width: 768px) {
+@media ( max-width: 1200px ) {
+    .footer-block .footer-links {
+        line-height: 46px;
+    }
+}
+
+@media ( max-width: 992px ){
+    .advantages-block .advantages-image{
+        opacity: 0.3;
+    }
+    footer .logo-box {
+        text-align: center;
+    }
+    .footer-block .footer-links {
+        line-height: 60px;
+    }
+    .footer-block ul {
+        text-align: center;
+    }
+    .footer-block ul.social-links {
+        margin-bottom: 10px;
+    }
+    .footer-block .legal {
+        text-align: center;
+    }
+    .footer-block .footer-nav {
+        float: none;
+    }
+    .services-block .services-item {
+        margin-bottom: 25px;
+    }
+    .softwares-block .softwares-block--desc.right-part {
+        padding-left: 0;
+    }
+    .features-item {
+        margin-bottom: 30px;
+    }
     .header-block--desc h1 {
         font-size: 46px;
     }
@@ -690,9 +777,12 @@ section.header-block {
         max-width: 500px;
         margin: auto;
     }
-    .features-item {
-        margin-bottom: 30px;
+    .prices-block .price-item {
+        margin-left: 0;
     }
+}
+
+@media only screen and ( max-width: 768px) {
     section h2 {
         padding: 50px 0 30px;
     }
@@ -715,38 +805,29 @@ section.header-block {
     .softwares-block .left-image:before {
         left: -230px;
     }
-    .services-block .services-item {
-        margin-bottom: 25px;
-    }
     .advantages-block .advantages-image {
         display: none;
     }
     .prices-block .row {
         margin: 0;
     }
-    .prices-block .price-item {
+    .header-block .main-nav a{
+        display: none;
+    }
+    .header-block .main-nav .sub-menu a{
+        display: block;
+    }
+    .header-block #nav-menu{
         margin-left: 0;
     }
-    footer .logo-box {
-        text-align: center;
+    .header-block .logo-box{
+        float: left;
+        width: 25%;
+        text-align: left;
     }
-    .footer-block .footer-links {
-        line-height: 60px;
-    }
-    .footer-block ul {
-        text-align: center;
-    }
-    .footer-block ul.social-links {
-        margin-bottom: 10px;
-    }
-    .footer-block .legal {
-        text-align: center;
-    }
-    .footer-block .footer-nav {
-        font: none;
-    }
-    .softwares-block .softwares-block--desc.right-part {
-        padding-left: 0;
+    .header-block #nav-menu{
+        position: absolute;
+        right: 15px;
     }
 }
 
@@ -756,10 +837,6 @@ section.header-block {
     }
     .header-block .main-nav {
         display: inline-block;
-    }
-    .header-block .main-nav a {
-        line-height: 24px;
-        display: block;
     }
     .header-block #nav-menu {
         cursor: pointer;
@@ -802,5 +879,37 @@ section.header-block {
     .footer-block .legal {
         line-height: 30px;
         padding: 10px 0;
+    }
+}
+
+@media ( min-width: 768px ) and ( max-height: 850px ) {
+    .header-block--img{
+        opacity: 0.4;
+    }
+}
+
+@media ( min-width: 1024px ) and ( min-height: 1024px ) {
+    .header-block--desc{
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+@media ( max-width: 830px ) and (orientation: landscape) {
+    .header-block--img{
+        opacity: 0.3;
+    }
+    .header-block header{
+        padding: 15px 0 0;
+    }
+    .header-block--desc h1{
+        line-height: 30px;
+        font-size: 36px;
+    }
+    .header-block--desc{
+        font-size: 14px;
+    }
+    .header-block--desc .arrow-down{
+        margin-top: 30px;
     }
 }

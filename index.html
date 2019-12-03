@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
+    <script src="js/smoothScroll.polyfill.js"></script>
     <script src="js/main.js"></script>
 </head>
 
@@ -14,11 +15,11 @@
 
     <section class="header-block">
         <div class="container">
-            <header class="row">
-                <div class="col-md-3 logo-box">
-                    <img src="img/Logo.svg" alt="Logo">
+            <header class="row" id="header">
+                <div class="col-md-2 col-lg-3 logo-box">
+                    <img src="img/Logo.svg" id="logo" alt="Logo" data-logoblack="img/logo_black.svg" data-logowhite="img/Logo.svg">
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-10 col-lg-9">
                     <nav class="main-nav">
                         <a href="#features">Funktionen</a>
                         <a href="#software">Kompatible Clients</a>
@@ -385,6 +386,8 @@
         </form>
     </div>
 
+    <div id="arrow-top"></div>
+
     <footer class="footer-block">
         <div class="container">
             <div class="row footer-links">
@@ -401,19 +404,19 @@
                 <div class="col-md-3">
                     <ul class="social-links">
                         <li>
-                            <a href="https://www.facebook.com/TreoPIM/" class="facebook" target="_blank"></a>
+                            <a href="https://www.facebook.com/treolabs/" class="facebook" target="_blank"></a>
                         </li>
                         <li>
                             <a href="https://github.com/treolabs" class="github" target="_blank"></a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/showcase/treopim-global/" class="linkedin" target="_blank"></a>
+                            <a href="https://www.linkedin.com/company/treolabs" class="linkedin" target="_blank"></a>
                         </li>
                         <li>
-                            <a href="https://www.xing.com/communities/groups/treopim-modern-open-source-pim-system-f2ec-1106983" class="xing" target="_blank"></a>
+                            <a href="https://www.xing.com/xbp/pages/treolabs-gmbh/" class="xing" target="_blank"></a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/TreoPIM" class="twitter" target="_blank"></a>
+                            <a href="https://twitter.com/Treolabs" class="twitter" target="_blank"></a>
                         </li>
                     </ul>
                 </div>
