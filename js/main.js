@@ -8,7 +8,8 @@ window.onload = function() {
         logo = document.getElementById('logo'),
         arrowTop = document.getElementById('arrow-top'),
         anchorlinks = document.querySelectorAll('a[href^="#"]'),
-        body = document.body;
+        body = document.body,
+        formSubmit = body.querySelector('.contact-form button[type="submit"]');
 
     menu.onclick = function() {
         this.parentNode.classList.toggle('open');
@@ -43,7 +44,6 @@ window.onload = function() {
             e.preventDefault();
             var target = document.getElementById(this.hash.replace('#', ''));
 
-            console.log(target);
             if (!target) { return }
 
             if (supportsNativeSmoothScroll) {
@@ -69,5 +69,49 @@ window.onload = function() {
             logo.src = logo.dataset.logowhite;
         }
 
+    }
+
+    formSubmit.onclick = function (e) {
+        if (!e.target.closest('form').checkValidity()) {
+            return;
+        }
+
+        e.preventDefault();
+
+        var url = '/send.php',
+            method = 'post',
+            form = body.querySelector('.contact-form'),
+            formGroups = form.querySelectorAll('.form-group'),
+            messageDiv = form.querySelector('.message'),
+            commentGroup = formGroups[formGroups.length-1],
+            formData = new FormData(form),
+            xhr = new XMLHttpRequest(),
+            successText = 'Ihre Nachricht wurde erfolgreich verschickt.',
+            errorText = 'Bitte korrigieren Sie Ihre Angaben.';
+
+        if (messageDiv !== null){
+            messageDiv.remove();
+        }
+
+        xhr.open(method, url);
+
+        xhr.onload = function (e) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    createMessage(successText, 'success', commentGroup);
+                } else if (xhr.status === 400) {
+                    createMessage(errorText, 'error', commentGroup);
+                }
+            }
+        };
+        xhr.send(formData);
+    }
+
+    function createMessage(message, status, parent) {
+        var statusDiv = document.createElement('div');
+
+        statusDiv.classList.add('message', status);
+        statusDiv.innerHTML = message;
+        parent.appendChild(statusDiv);
     }
 };
