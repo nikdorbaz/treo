@@ -9,7 +9,7 @@ window.onload = function() {
         arrowTop = document.getElementById('arrow-top'),
         anchorlinks = document.querySelectorAll('a[href^="#"]'),
         body = document.body,
-        formSubmit = body.querySelector('.contact-form button[type="submit"]');
+        form = body.querySelector('.contact-form');
 
     menu.onclick = function() {
         this.parentNode.classList.toggle('open');
@@ -71,40 +71,52 @@ window.onload = function() {
 
     }
 
-    formSubmit.onclick = function (e) {
-        if (!e.target.closest('form').checkValidity()) {
-            return;
-        }
-
-        e.preventDefault();
-
-        var url = '/send.php',
-            method = 'post',
-            form = body.querySelector('.contact-form'),
-            formGroups = form.querySelectorAll('.form-group'),
-            messageDiv = form.querySelector('.message'),
-            commentGroup = formGroups[formGroups.length-1],
-            formData = new FormData(form),
-            xhr = new XMLHttpRequest(),
-            successText = 'Ihre Nachricht wurde erfolgreich verschickt.',
-            errorText = 'Bitte korrigieren Sie Ihre Angaben.';
-
-        if (messageDiv !== null){
-            messageDiv.remove();
-        }
-
-        xhr.open(method, url);
-
-        xhr.onload = function (e) {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    createMessage(successText, 'success', commentGroup);
-                } else if (xhr.status === 400) {
-                    createMessage(errorText, 'error', commentGroup);
-                }
+    if (form !== null){
+        var formSubmit = form.querySelector('button[type="submit"]');
+        formSubmit.onclick = function (e) {
+            if (!e.target.closest('form').checkValidity()) {
+                return;
             }
-        };
-        xhr.send(formData);
+
+            e.preventDefault();
+
+            var url = '/send.php',
+                method = 'post',
+                formGroups = form.querySelectorAll('.form-group'),
+                messageDiv = form.querySelector('.message'),
+                commentGroup = formGroups[formGroups.length-1],
+                formData = new FormData(form),
+                xhr = new XMLHttpRequest(),
+                successText = 'Ihre Nachricht wurde erfolgreich verschickt.',
+                errorText = 'Bitte korrigieren Sie Ihre Angaben.';
+
+            if (messageDiv !== null){
+                messageDiv.remove();
+            }
+
+            xhr.open(method, url);
+
+            xhr.onload = function (e) {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        createMessage(successText, 'success', commentGroup);
+                    } else if (xhr.status === 400) {
+                        createMessage(errorText, 'error', commentGroup);
+                    }
+                }
+            };
+            xhr.send(formData);
+        }
+
+        var packageSelect = form.querySelector('[name=package]');
+        packageSelect.onchange = function (e) {
+            var storageSelect = form.querySelector('.col-md-6:nth-child(6)');
+            if (e.target.value === 'Enterprise') {
+                storageSelect.style.display = 'block';
+            } else {
+                storageSelect.style.display = 'none';
+            }
+        }
     }
 
     function createMessage(message, status, parent) {

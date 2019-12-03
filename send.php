@@ -27,7 +27,11 @@ function genMailBody($post)
         $mailBody .= "<br>Telefon: {$formPhone}";
     }
 
-    $mailBody .= "<br>Paket: {$formPackage}<br>Kapazität: {$formStorage}";
+    $mailBody .= "<br>Paket: {$formPackage}";
+
+    if ($formPackage === 'Enterprise') {
+        $mailBody .= "<br>Kapazität: {$formStorage}";
+    }
 
     if ($formComment !== "") {
         $mailBody .= "<br>Kommentar: {$formComment}";
