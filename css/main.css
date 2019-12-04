@@ -955,3 +955,8 @@ section.header-block {
         margin-top: 30px;
     }
 }
+
+.doc-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
