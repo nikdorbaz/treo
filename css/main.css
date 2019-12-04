@@ -192,7 +192,7 @@ select {
     text-align: center;
 }
 
-#arrow-top{
+#arrow-top {
     background-image: url(../img/arrow_down.svg);
     background-position: center 15px;
     background-repeat: no-repeat;
@@ -210,18 +210,20 @@ select {
     transition: all 0.5s;
 }
 
-#arrow-top.show{
+#arrow-top.show {
     transform: rotate(180deg);
     opacity: 0.4;
 }
 
+
 /* Header */
+
 header {
     padding: 45px 0;
     background-image: url('../img/background.png');
 }
 
-body header.fixed{
+body header.fixed {
     position: fixed;
     top: 0;
     left: 15px;
@@ -232,11 +234,11 @@ body header.fixed{
     border-bottom: 1px solid #028ab4;
 }
 
-header.fixed .main-nav a{
+header.fixed .main-nav a {
     color: #333;
 }
 
-header.fixed #nav-menu span{
+header.fixed #nav-menu span {
     background: #333;
 }
 
@@ -381,12 +383,13 @@ header .main-nav .sub-menu .sub-menu--login::before {
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .main .header-block {
-  padding-top: 150px;
+    padding-top: 150px;
 }
+
 
 /* Start block */
 
@@ -455,7 +458,7 @@ section.header-block {
 
 /* Softwares block */
 
-.softwares-block{
+.softwares-block {
     overflow: hidden;
 }
 
@@ -643,6 +646,7 @@ section.header-block {
     color: red;
 }
 
+
 /* Footer block */
 
 .footer-block .footer-links {
@@ -747,11 +751,11 @@ section.header-block {
     margin-right: 5px;
 }
 
-.conditions h1{
+.conditions h1 {
     font-weight: 400;
 }
 
-.conditions h2{
+.conditions h2 {
     text-align: left;
     font-weight: 400;
     padding: 30px 0 10px;
@@ -759,14 +763,14 @@ section.header-block {
     font-size: 30px;
 }
 
-@media ( max-width: 1200px ) {
+@media ( max-width: 1200px) {
     .footer-block .footer-links {
         line-height: 46px;
     }
 }
 
-@media ( max-width: 992px ){
-    .advantages-block .advantages-image{
+@media ( max-width: 992px) {
+    .advantages-block .advantages-image {
         opacity: 0.3;
     }
     footer .logo-box {
@@ -802,13 +806,13 @@ section.header-block {
     h2 {
         font-size: 30px;
     }
-    .header-block .logo-box {
+    header .logo-box {
         text-align: center;
     }
-    .header-block header {
+    header header {
         padding: 25px 0;
     }
-    .header-block .main-nav {
+    header .main-nav {
         padding-left: 0;
     }
     .header-block--desc {
@@ -849,21 +853,21 @@ section.header-block {
     .prices-block .row {
         margin: 0;
     }
-    .header-block .main-nav a{
+    header .main-nav a {
         display: none;
     }
-    .header-block .main-nav .sub-menu a{
+    header .main-nav .sub-menu a {
         display: block;
     }
-    .header-block #nav-menu{
+    header #nav-menu {
         margin-left: 0;
     }
-    .header-block .logo-box{
+    header .logo-box {
         float: left;
         width: 25%;
         text-align: left;
     }
-    .header-block #nav-menu{
+    header #nav-menu {
         position: absolute;
         right: 15px;
     }
@@ -873,16 +877,16 @@ section.header-block {
     .header-block--desc h1 {
         font-size: 38px;
     }
-    .header-block .main-nav {
+    header .main-nav {
         display: inline-block;
     }
-    .header-block #nav-menu {
+    header #nav-menu {
         cursor: pointer;
         position: absolute;
         right: 15px;
         top: -10px;
     }
-    .header-block header {
+    header header {
         padding: 0;
     }
     .modal {
@@ -920,34 +924,34 @@ section.header-block {
     }
 }
 
-@media ( min-width: 768px ) and ( max-height: 850px ) {
-    .header-block--img{
+@media ( min-width: 768px) and ( max-height: 850px) {
+    .header-block--img {
         opacity: 0.4;
     }
 }
 
-@media ( min-width: 1024px ) and ( min-height: 1024px ) {
-    .header-block--desc{
+@media ( min-width: 1024px) and ( min-height: 1024px) {
+    .header-block--desc {
         font-size: 18px;
         line-height: 30px;
     }
 }
 
-@media ( max-width: 830px ) and (orientation: landscape) {
-    .header-block--img{
+@media ( max-width: 830px) and (orientation: landscape) {
+    .header-block--img {
         opacity: 0.3;
     }
-    .header-block header{
+    .header-block header {
         padding: 15px 0 0;
     }
-    .header-block--desc h1{
+    .header-block--desc h1 {
         line-height: 30px;
         font-size: 36px;
     }
-    .header-block--desc{
+    .header-block--desc {
         font-size: 14px;
     }
-    .header-block--desc .arrow-down{
+    .header-block--desc .arrow-down {
         margin-top: 30px;
     }
 }
