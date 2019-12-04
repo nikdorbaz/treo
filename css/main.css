@@ -960,3 +960,27 @@ section.header-block {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+.cookiealert {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 !important;
+    z-index: 2;
+    opacity: 0;
+    border-top: 1px solid #028ab4;
+    transform: translateY(100%);
+    transition: all 500ms ease-out;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.cookiealert.show {
+    opacity: 1;
+    transform: translateY(0%);
+    transition-delay: 1000ms;
+}
+
+.cookiealert .text-link {
+    color: red;
+}
