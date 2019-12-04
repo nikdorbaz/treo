@@ -131,7 +131,7 @@
                     <div class="softwares-block--desc">
                         <h3>Desktop Clients</h3>
                         <p><strong>Microsoft Outlook</strong> - über kostenlosen Plugin "Outlook CalDav Synchronizer" (ohne Einsatz von MAPI), ab Outlook 2013 über nativen ActiveSync.</p>
-                        <p><strong>Mozilla Thunderbird</strong> - dank der Nutzung von CalDAV und CarDAV Protokollen, noch mehr Möglichkeiten dank SOGo Connector und SOGo Intergrator.</p>
+                        <p><strong>Mozilla Thunderbird</strong> - dank der Nutzung von CalDAV und CarDAV Protokollen. Noch mehr Möglichkeiten dank SOGo Connector und SOGo Intergrator.</p>
                         <p><strong>Apple iCal und AdressBook</strong></p>
                         <p><strong>Andere Tools</strong> - über ActiveSync kompatibel sind.</p>
                     </div>
@@ -147,7 +147,7 @@
                 <div class="col-md-6">
                     <div class="softwares-block--desc right-part">
                         <h3>Web und Mobile Clients</h3>
-                        <p><strong>Web-Client</strong> - kommt mit allen Groupware Funktionen direkt aus Web</p>
+                        <p><strong>Web-Client</strong> - kommt mit allen Groupware Funktionen direkt aus der Box</p>
                         <p><strong>Android</strong> - über ActiveSync</p>
                         <p><strong>Apple iPhone/iPad and BlackBerry 10</strong> - dank der Nutzung von CalDAV und CarDAV Protokollen</p>
                         <p><strong>Windows Phone</strong> - über ActiveSync</p>
@@ -314,53 +314,52 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="name">Name*</label>
-                            <input type="text" class="form-control" id="name">
+                            <input type="text" class="form-control" id="name" name="name" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="firma">Firmenname*</label>
-                            <input type="text" class="form-control" id="firma">
+                            <input type="text" class="form-control" id="firma" name="firma" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="email">E-Mail*</label>
-                            <input type="email" class="form-control" id="email">
+                            <input type="email" class="form-control" id="email" name="email" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="phone">Telefon</label>
-                            <input type="tel" class="form-control" id="phone">
+                            <input type="tel" class="form-control" id="phone" name="phone">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group select">
                             <label for="package">Gewünschtes Paket</label>
-                            <select class="form-control" id="package">
+                            <select class="form-control" id="package" name="package">
                                 <option>Enterprise</option>
-                                <option>Team</option>
-                                <option>Small Business</option>
                                 <option>Business</option>
+                                <option>Small Business</option>
+                                <option>Team</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group select">
                             <label for="storage">Gewünschter Speicherplatz</label>
-                            <select class="form-control" id="storage">
+                            <select class="form-control" id="storage" name="storage">
+                                <option>Mehr als 2000 GB</option>
+                                <option>Mehr als 3000 GB</option>
                                 <option>Mehr als 5000 GB</option>
-                                <option>2000 GB</option>
-                                <option>1000 GB</option>
-                                <option>500 GB</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="comment">Ihre Nachricht</label>
-                            <textarea class="form-control" rows="6" id="comment"></textarea>
+                            <textarea class="form-control" rows="6" id="comment" name="comment"></textarea>
                         </div>
                     </div>
                     <div class="col-md-12 text-center">
@@ -402,7 +401,7 @@
                 <div class="col-md-7">
                     <ul class="contacts">
                         <li class="contacts--mail"><a href="mailto:team@treo24.cloud">team@treo24.cloud</a></li>
-                        <li class="contacts--phone"><a href="tel:+4994120602610">+49 (941) 206 026 10M</a></li>
+                        <li class="contacts--phone"><a href="tel:+4994120602610">+49 (941) 206 026 10</a></li>
                         <li class="contacts--time">Wtgs., 08.00 - 17.00 Uhr</li>
                     </ul>
                 </div>

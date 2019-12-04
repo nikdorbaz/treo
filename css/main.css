@@ -621,6 +621,19 @@ section.header-block {
     margin-right: 30px;
 }
 
+.contact-form .message {
+    padding-top: 10px;
+}
+
+.contact-form .success {
+    text-align: center;
+    color: green;
+}
+
+.contact-form .error {
+    text-align: center;
+    color: red;
+}
 
 /* Footer block */
 
