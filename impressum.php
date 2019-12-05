@@ -7,11 +7,7 @@
 </head>
 <?php include_once 'header.html'?>
 
-<section class="header-block">
-    test
-</section>
-
-<section class="doc-section">
+<section class="conditions">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
