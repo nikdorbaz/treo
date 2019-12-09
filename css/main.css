@@ -221,6 +221,8 @@ select {
 header {
     padding: 45px 0;
     background-image: url('../img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 body header.fixed {
