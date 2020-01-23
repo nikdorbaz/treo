@@ -44,7 +44,10 @@ window.onload = function() {
             e.preventDefault();
             var target = document.getElementById(this.hash.replace('#', ''));
 
-            if (!target) { return }
+            if (!target) {
+                window.location.href = window.location.origin + this.getAttribute('href');
+                return;
+            }
 
             if (supportsNativeSmoothScroll) {
                 window.scrollTo({

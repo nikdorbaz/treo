@@ -202,6 +202,7 @@ select {
     width: 40px;
     height: 40px;
     position: fixed;
+    z-index: 2;
     right: 15px;
     bottom: 45px;
     border: 1px solid #01afd0;
@@ -225,11 +226,15 @@ header {
     background-repeat: no-repeat;
 }
 
+body:not('.main') header{
+    padding: 15px 0;
+}
+
 body header.fixed {
     position: fixed;
     top: 0;
-    left: 15px;
-    right: 15px;
+    left: 0;
+    right: 0;
     background: #fff;
     z-index: 9;
     padding: 5px 0;
@@ -576,6 +581,7 @@ section.header-block {
 .prices-block .price-item--btn span {
     font-size: 20px;
     font-weight: 400;
+    line-height: 40px;
 }
 
 .prices-block .price-item--btn.btn-green {
@@ -753,6 +759,10 @@ section.header-block {
     margin-right: 5px;
 }
 
+.conditions p {
+    text-align: justify;
+}
+
 .conditions h1 {
     font-weight: 400;
 }
@@ -824,12 +834,21 @@ section.header-block {
     .prices-block .price-item {
         margin-left: 0;
     }
-}
-
-@media only screen and ( max-width: 768px) {
     section h2 {
         padding: 50px 0 30px;
     }
+    .softwares-block .softwares-block--desc{
+        padding-top: 0;
+    }
+    .footer-block .footer-links{
+        line-height: 100px;
+    }
+    .footer-block ul{
+        text-align: center;
+    }
+}
+
+@media only screen and ( max-width: 768px) {
     .softwares-block .softwares-block--desc {
         padding-top: 0;
         max-width: 100%;
@@ -873,6 +892,9 @@ section.header-block {
         position: absolute;
         right: 15px;
     }
+    .form-control{
+        font-size: 16px;
+    }
 }
 
 @media only screen and ( max-width: 480px) {
@@ -886,7 +908,7 @@ section.header-block {
         cursor: pointer;
         position: absolute;
         right: 15px;
-        top: -10px;
+        top: 0;
     }
     header header {
         padding: 0;
@@ -943,8 +965,11 @@ section.header-block {
     .header-block--img {
         opacity: 0.3;
     }
-    .header-block header {
+    .main header {
         padding: 15px 0 0;
+    }
+    .main .header-block{
+        padding-top: 100px;
     }
     .header-block--desc h1 {
         line-height: 30px;
@@ -956,6 +981,7 @@ section.header-block {
     .header-block--desc .arrow-down {
         margin-top: 30px;
     }
+
 }
 
 .cookiealert {
