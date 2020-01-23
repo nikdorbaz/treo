@@ -220,14 +220,10 @@ select {
 /* Header */
 
 header {
-    padding: 45px 0;
+    padding: 15px 0;
     background-image: url('../img/background.png');
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-body:not('.main') header{
-    padding: 15px 0;
 }
 
 body header.fixed {
@@ -391,6 +387,7 @@ header .main-nav .sub-menu .sub-menu--login::before {
     top: 0;
     width: 100%;
     z-index: 2;
+    padding: 45px 0;
 }
 
 .main .header-block {
